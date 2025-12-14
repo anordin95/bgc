@@ -441,8 +441,8 @@ memcpy_unsigned_char(unsigned char *a, unsigned char *b, int count);
 Much better to just use `void*` and have one function that can do it
 all.
 
-That's the power of `void*`. You can write functions that don't care
-about the type and is still able to do things with it.
+That's the power of `void*`. You can write a function that doesn't care
+about the variable's type and is still able to do things with it.
 
 But with great power comes great responsibility. Maybe not _that_ great
 in this case, but there are some limits.
