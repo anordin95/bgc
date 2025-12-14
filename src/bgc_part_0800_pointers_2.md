@@ -320,7 +320,9 @@ As the return type, it means the function returns no values.
 In those usages, the keyword `void` evokes the definition of the word
 "void" meaning none or empty.
 `void*` used as a variable type evokes a similar meaning: the data
-being pointed to has no type or is typeless.
+being pointed to has no type.
+Unlike the function usages of `void`, there is still something there,
+it's just typeless.
 
 And sometimes it's really useful to have a pointer to a thing _that you
 don't know the type of_!
