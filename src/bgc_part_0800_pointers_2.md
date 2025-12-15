@@ -520,7 +520,7 @@ but we do it with post-increment so that both `d` and `s` move to the
 next byte after the assignment is made.
 
 Lastly, most memory and string functions return a copy of a pointer to
-the destination string just in case the caller wants to use it.
+the destination just in case the caller wants to use it.
 
 Now that we've done that, I just want to quickly point out that we can
 use this technique to iterate over the bytes of _any_ object in C,
