@@ -199,13 +199,13 @@ types. And we learned that `char` was secretly a small `int` in
 disguise. So we know the `int`s can come in multiple bit sizes.
 
 But there are a couple more integer types we should look at, and the
-_minimum_ minimum and maximum values they can hold.
+minimum ranges they can hold. (Your implementation probably has wider
+ranges than the spec requires, but the ranges here are the ones you can
+be **certain** are portably available.)
 
-Yes, I said "minimum" twice. The spec says that these types will hold
-numbers of _at least_ these sizes, so your implementation might be
-different. The header file `<limits.h>` defines macros that hold the
-minimum and maximum integer values; rely on that to be sure, and _never
-hardcode or assume these values_.
+The header file `<limits.h>` defines macros that hold the ranges for
+various types; rely on that to be sure, and _never hardcode or assume
+these values_.
 
 [i[`short` type]<]
 [i[`long` type]<]
@@ -225,16 +225,18 @@ short x;
 ```
 
 Let's take a look at the integer data types and sizes in ascending
-order, grouped by signedness.
+order, grouped by signedness. Again, these minimum and maximum limits
+are what you are portably guaranteed by the spec; your system probably
+has wider ranges.
 
 |Type|Minimum Bytes|Minimum Value|Maximum Value|
 |:-|-:|-:|-:|
-|`char`|1|-127 or 0|127 or 255^[Depends on if a `char` defaults to `signed char` or `unsigned char`]|
-|`signed char`|1|-127|127|
-|`short`|2|-32767|32767|
-|`int`|2|-32767|32767|
-|`long`|4|-2147483647|2147483647|
-|`long long`|8|-9223372036854775807|9223372036854775807|
+|`char`|1|-128 or 0|127 or 255^[Depends on if a `char` defaults to `signed char` or `unsigned char`]|
+|`signed char`|1|-128|127|
+|`short`|2|-32768|32767|
+|`int`|2|-32768|32767|
+|`long`|4|-2147483648|2147483647|
+|`long long`|8|-9223372036854775808|9223372036854775807|
 |`unsigned char`|1|0|255|
 |`unsigned short`|2|0|65535|
 |`unsigned int`|2|0|65535|
