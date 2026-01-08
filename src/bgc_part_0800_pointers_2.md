@@ -312,15 +312,18 @@ int my_strlen(char s[])   // Works, too!
 
 [i[`void*` void pointer]<]
 
-You've already seen the `void` keyword used with functions, but this is
-an entirely separate, unrelated animal.
+You've already seen the `void` keyword used with functions that
+indicates no parameters or no return value, but this is an entirely
+separate, unrelated animal. 
 
-Sometimes it's useful to have a pointer to a thing _that you don't know
-the type of_.
+A `void*` is definitely a pointer to an existing *thing*. But the `void`
+part of it indicates that we don't know the _type_ of the thing. And
+sometimes, believe it or not, that's really useful. It enables us to
+write code that's a little more type-agnostic, which is some nice
+flexibility to have in a typed language like C.
 
-I know. Bear with me just a second.
-
-There are basically two use cases for this.
+There are basically two use cases for this—let's check them out and see
+if we can demystify it a bit.
 
 [i[`memcpy()` function]<]
 
