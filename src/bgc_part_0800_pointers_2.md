@@ -277,7 +277,11 @@ variable.
 
 The one big difference is that you can _modify_ a pointer to point to a
 different address, but you can't do that with an array variable. <!--
-6.3.2.1p2 -->
+6.3.2.1p2 --> In other words, you can't assign into an array variable at
+all—only into individual elements of that array.
+
+If you really want to copy one array to another, you have to use a
+function like `memcpy()` (or a loop) to make that happen.
 
 ### Array/Pointer Equivalence in Function Calls
 

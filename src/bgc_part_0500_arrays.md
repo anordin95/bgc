@@ -407,7 +407,9 @@ extensively in the upcoming examples.
 
 But hold on a second---isn't `p` an `int*`? And `*p` gives us `11`, same
 as `a[0]`? Yessss. You're starting to get a glimpse of how arrays and
-pointers are related in C.
+pointers are related in C. (We'll talk about this a lot more in the
+[Pointers II](#pointers2) chapter, under [Array/Pointer
+Equivalence](#arraypointerequiv).)
 [i[Arrays-->as pointers]>]
 
 ### Passing Single Dimensional Arrays to Functions {#passing1darrays}
